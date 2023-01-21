@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: 400% 400%;
+  background-color: rgb(39, 39, 39);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.area-login {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
+  background-size: 400% 400%;
+  height: 100vh;
+  animation: gradient 15s ease infinite;
+  width: 300px;
+  height: auto;
+  max-height: 230px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login input {
+  margin-top: 10px;
+  background-color: #be86ff71;
+  border: none;
+  height: 45px;
+  outline: none;
+  border-radius: 9px;
+  color: #ffffff;
+  padding-left: 10px;
+}
+
+label {
+  display: block;
+  padding-bottom: 5px;
+  color: rgba(226, 216, 216, 0.781);
+  position: relative;
+  padding-left: 5px;
+  margin-bottom: -8px;
+}
+
+label span {
+  position: absolute;
+  font-size: 14px;
+  padding-right: 5px;
+  color: rgba(255, 255, 255, 0.507);
+  right: 0;
+}
+
+input::placeholder {
+  color: #ffffff7e;
+  font-size: 14px;
+}
+
+form [type="submit"] {
+  display: block;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #7b3de081;
+  font-size: 20px;
+  color: #ffffff7e;
+  text-transform: uppercase;
+  padding-left: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form [type="submit"]:hover {
+  color: #ffffffc9;
+  background-color: #6f38d4a4;
+}
+
+.login footer {
+  color: rgba(255, 255, 255, 0.507);
+  font-size: 10px;
+  display: block;
+}
+
+footer [type="instagram"] {
+  filter: opacity(0.6) invert(1);
+  display: block;
+  padding: 10px;
+}
+
+.media-object {
+  filter: invert(1);
+}
+
+.error.voucher-error {
+  display: block;
+  color: #ffffff7e;
+  margin-bottom: 0px;
+  transform: translateY(-10px);
+}
