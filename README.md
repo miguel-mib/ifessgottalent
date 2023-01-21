@@ -1,14 +1,28 @@
 <h1 align="center"><stroke>IFES's Got Talent</stroke></h1>
-<p>
- Nome: Miguel Migliorelli Bringhenti
- <br>
- Data de início: 19/12/2022
- <br>
- Objetivo: Treinar minhas habilidades com Python
- <br>
- Qualquer dica, comenta aí
+
+<p align="center">
+  <a href="#-linguagens">Linguagens</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge">
 </p>
+
+## 👨‍💻 Linguagens
+
+- HTML
+- CSS
+- JavaScript
+
+## :memo: Sobre
+
+IFES's Got Talent (IGT) é um projeto promovido pela sala M08 do curso Técnico em Informática para a Internet do Instituto Federal do Espírito Santo (IFES) - Campus Colatina.
+
+O site visa auxiliar nos votos do show.
+
+- Este repositório contém apenas o front-end do site.
+
+---
+
+Feito por Miguel Migliorelli Bringhenti
