@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#-linguagens">Linguagens</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-sobre">Sobre</a
 </p>
 
 <p align="center">
