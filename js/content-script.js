@@ -86,8 +86,6 @@ vote_spans.forEach(function (item){
     this.innerHTML = "SELECIONADO"
   
   })
-
-
 })
 
 /* 
