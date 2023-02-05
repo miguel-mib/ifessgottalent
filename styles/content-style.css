@@ -1,12 +1,14 @@
 :root {
   --color-white: #fff;
   --color-white-hover: #ffffff7e;
+  --color-bg-color:#28243c;
   --color-dark1: rgb(39, 39, 39);
   --color-dark2: #2d2d2d;
   --color-dark3: #414141;
   --color-dark4: #1c1c1c;
   --color-dark5: #343434;
   --color-purple: #be86ff71;
+  --color-dark-purple: #151728;
   --color-purple-shadow: #4a2872;
 }
 
@@ -29,7 +31,7 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-dark1);
+  background-color: var(--color-bg-color);
   color: var(--color-white);
 }
 
@@ -47,13 +49,13 @@ body {
 }
 
 .header {
-  background-color: var(--color-dark2);
+  background-color: var(--color-dark-purple);
   top: 0;
   left: 0;
   justify-content: space-between;
   padding: 0 10%;
   height: 3.8em;
-  box-shadow: 1px 1px 4px var(--color-dark4);
+  box-shadow: 1px 1px 100px var(--color-dark-purple);
   z-index: 3;
 }
 
@@ -63,7 +65,7 @@ body {
 }
 
 .content {
-  padding-top: 5em;
+  padding-top: 3em;
   text-align: center;
   height: 100vh;
   transition: 1s;
@@ -81,7 +83,7 @@ body {
 }
 
 .active {
-  background: var(--color-dark3);
+  background: var(--color-purple-shadow);
   width: 100%;
   display:flex;
   justify-content: center;
@@ -93,7 +95,7 @@ body {
 .btn-icon-header {
   background: transparent;
   border: none;
-  color: var(--color-white);
+  color: var(--color-purple-shadow);
   cursor: pointer;
   display: none;
 }
@@ -103,7 +105,7 @@ body {
     position: absolute;
     flex-direction: column !important;
     top: 0;
-    background: var(--color-dark5);
+    background: var(--color-dark-purple);
     height: 100%;
     width: 35vw;
     padding: 1em;
@@ -155,7 +157,7 @@ body {
   background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  box-shadow: 7px 7px 10px var(--color-dark4);
+  box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
 }
 
 .participant-box img {
@@ -244,7 +246,7 @@ body {
     "Lucida Sans", Arial, sans-serif;
   background-color: #7b3de0;
   font-size: 20px;
-  box-shadow: 1px 1px 10px var(--color-purple-shadow);
+  box-shadow: 0px 8px 24px 0px var(--color-purple-shadow);
   color: #ffffff7e;
   text-transform: uppercase;
   font-weight: bold;
@@ -272,7 +274,7 @@ body {
 }
 
 .instagram-socialmedia .instagram-img img {
-  box-shadow: 7px 7px 10px var(--color-dark2);
+  box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
   height: 90px;
   width: auto;
   border-radius: 50%;
@@ -303,7 +305,7 @@ body {
   display: block;
   background-color: #7b3de0;
   border: none;
-  box-shadow: 1px 1px 10px var(--color-purple-shadow);
+  box-shadow: 0px 8px 24px 0px var(--color-purple-shadow);
   color: #ffffffbb;
 }
 

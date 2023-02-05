@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-size: 400% 400%;
-  background-color: rgb(39, 39, 39);
+  background-color: #28243c;
   height: 100vh;
   overflow: hidden;
 }
@@ -32,9 +32,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -55,6 +57,17 @@ body {
   border-radius: 9px;
   color: #ffffff;
   padding-left: 10px;
+  box-shadow: 0 8px 24px 0 rgba(123, 61, 224, 1);
+}
+
+.login input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+}
+
+.login input:not(:focus)::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all 200ms linear;
 }
 
 label {
@@ -90,6 +103,7 @@ form [type="submit"] {
   padding-left: 0px;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 8px 24px 0 rgba(123, 61, 224, 1);
 }
 
 form [type="submit"]:hover {
@@ -115,7 +129,20 @@ footer [type="instagram"] {
 
 .error.voucher-error {
   display: block;
+  transform: translateY(-30px);
   color: #ffffff7e;
+  opacity: 0;
   margin-bottom: 0px;
-  transform: translateY(-10px);
+  transition: all 200ms linear;
+}
+
+@keyframes voucherError {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: .7;
+    transform: translateY(0px);
+  }
 }
