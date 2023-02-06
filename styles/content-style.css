@@ -2,12 +2,13 @@
   --color-white: #fff;
   --color-white-hover: #ffffff7e;
   --color-bg-color:#28243c;
-  --color-dark1: rgb(39, 39, 39);
+  --color-dark1: #272727;
   --color-dark2: #2d2d2d;
   --color-dark3: #414141;
   --color-dark4: #1c1c1c;
   --color-dark5: #343434;
   --color-purple: #be86ff71;
+  --color-purple2: #1f1a31;
   --color-dark-purple: #151728;
   --color-purple-shadow: #4a2872;
 }
@@ -49,18 +50,18 @@ body {
 }
 
 .header {
-  background-color: var(--color-dark-purple);
+  background-color: var(--color-purple2);
   top: 0;
   left: 0;
   justify-content: space-between;
   padding: 0 10%;
   height: 3.8em;
-  box-shadow: 1px 1px 100px var(--color-dark-purple);
+  box-shadow: 0 8px 24px 0 var(--color-purple2);
   z-index: 3;
 }
 
 .navigation-header {
-  gap: 3em;
+  gap: 2em;
   z-index: 2;
 }
 
@@ -75,6 +76,7 @@ body {
   text-decoration: none;
   color: var(--color-purple);
   transition: 1s;
+  margin: 18px;
   font-weight: bold;
 }
 
@@ -85,7 +87,7 @@ body {
 .active {
   background: var(--color-purple-shadow);
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 40px;
@@ -95,7 +97,7 @@ body {
 .btn-icon-header {
   background: transparent;
   border: none;
-  color: var(--color-purple-shadow);
+  color: var(--color-white-hover);
   cursor: pointer;
   display: none;
 }
@@ -105,7 +107,8 @@ body {
     position: absolute;
     flex-direction: column !important;
     top: 0;
-    background: var(--color-dark-purple);
+    background: var(--color-purple2);
+    box-shadow: 0 8px 24px 0 var(--color-purple2);
     height: 100%;
     width: 35vw;
     padding: 1em;
@@ -114,7 +117,7 @@ body {
     overflow: hidden;
     position: fixed;
   }
-
+  
   .btn-icon-header {
     display: block;
   }
@@ -144,6 +147,10 @@ body {
   justify-content: center;
 }
 
+.participants {
+  display: flex;
+}
+
 .participant-box {
   text-align: center;
   justify-content: center;
@@ -152,12 +159,23 @@ body {
   margin: auto;
   height: auto;
   width: 300px;
+  gap: 35px;
   margin-bottom: 50px;
   border-radius: 15px;
   background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
+}
+
+@media screen and (max-width: 768px) {
+  .participant-box {
+    gap: 0px;
+  }
+
+  .participants { 
+    flex-direction: column;
+  }
 }
 
 .participant-box img {
@@ -261,6 +279,7 @@ body {
 
 #sponsors-section {
   background-color: #1c1c1c;
+  height: 4000px;
 }
 
 #socialmedia-section {

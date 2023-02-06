@@ -1,126 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../styles/content-style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <title>IGT Votação</title>
-  </head>
-
-  <body id="body">
-    <header class="header" id="header">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../styles/content-style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <title>IGT Votação</title>
+</head>
+<body id="body">
+  <header class="header" id="header">
+    <button onclick="toggleSidebar()" class="btn-icon-header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
+    </button>
+    <div class="logo-header">
+      <img src="../assets/svg/logo.svg" alt="Logo IGT" id="logo" class="img-logo-header" />
+    </div>
+    <div class="navigation-header" id="navigation-header">
       <button onclick="toggleSidebar()" class="btn-icon-header">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+          viewBox="0 0 16 16">
           <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-          />
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
         </svg>
       </button>
-      <div class="logo-header">
-        <img
-          src="../assets/svg/logo.svg"
-          alt="Logo IGT"
-          id="logo"
-          class="img-logo-header"
-        />
-      </div>
-      <div class="navigation-header" id="navigation-header">
-        <button onclick="toggleSidebar()" class="btn-icon-header">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            class="bi bi-x"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
-        </button>
-        <a href="#voting-section" onclick="closeSidebar()" class="active"
-          >Votação</a
-        >
-        <a href="#sponsors-section" onclick="closeSidebar()">Patrocinadores</a>
-        <a href="#socialmedia-section" onclick="closeSidebar()"
-          >Redes Sociais</a
-        >
-        <a href="#credits-section" onclick="closeSidebar()">Créditos</a>
-      </div>
-    </header>
-    <section tabindex="0" class="content" id="content">
-      <section name="voting-section" id="vote-section" class="section">
-        <form class="form-votacao" name="form-votacao">
-          <div class="participants">
-            <div class="participant-box">
-              <img src="../assets/participants/blank.png" alt="blank" />
-              <p id="name">participant name undefined</p>
-              <p id="category">participant category undefined</p>
-              <p id="talent-info">talent info undefined</p>
-              <label id="radio-label">
-                <input
-                  type="radio"
-                  name="vote-button"
-                  id="vote-button"
-                  value="0"
-                />
-                <span>SELECIONAR</span>
-              </label>
-            </div>
-          </div>
-          <input type="submit" id="send-vote" value="ENVIAR VOTO" />
-        </form>
-      </section>
-      <section name="sponsors-section" id="sponsors-section" class="section">
-        <div>Área dos Patrocinadores</div>
-      </section>
-      <section
-        name="socialmedia-section"
-        id="socialmedia-section"
-        class="section"
-      >
-        <div class="instagram-socialmedia">
-          <div class="instagram-img">
-            <img src="../assets/jpg/instagram-igt.jpg" id="instagram-img" />
-          </div>
-          <div class="instagram-label">
-            <div class="instagram-name">ifes.gottalent</div>
-            <div class="instagram-follow">
-              <a
-                class="instagram-href"
-                href="https://www.instagram.com/ifes.gottalent/"
-                target="_blank"
-              >
-                <button class="instagram-button">
-                  <div>Seguir</div>
-                </button>
-              </a>
-            </div>
+      <a href="#voting-section" onclick="closeSidebar()" class="active">Votação</a>
+      <a href="#sponsors-section" onclick="closeSidebar()">Patrocinadores</a>
+      <a href="#socialmedia-section" onclick="closeSidebar()">Redes Sociais</a>
+      <a href="#credits-section" onclick="closeSidebar()">Créditos</a>
+    </div>
+  </header>
+  <section tabindex="0" class="content" id="content">
+    <section name="voting-section" id="vote-section" class="section">
+      <form class="form-votacao" name="form-votacao">
+        <div class="participants">
+          <div class="participant-box">
+            <img src="../assets/participants/blank.png" alt="blank" />
+            <p id="name">participant name undefined</p>
+            <p id="category">participant category undefined</p>
+            <p id="talent-info">talent info undefined</p>
+            <label id="radio-label">
+              <input type="radio" name="vote-button" id="vote-button" value="0" />
+              <span>SELECIONAR</span>
+            </label>
           </div>
         </div>
-      </section>
-      <section name="credits-section" id="credits-section" class="section">
-        <footer>
-          <p>footer (créditos)</p>
-        </footer>
-      </section>
+        <input type="submit" id="send-vote" value="ENVIAR VOTO" />
+      </form>
     </section>
-  </body>
-  <script src="../js/content-script.js"></script>
+    <section name="sponsors-section" id="sponsors-section" class="section">
+      <div>Área dos Patrocinadores</div>
+    </section>
+    <section name="socialmedia-section" id="socialmedia-section" class="section">
+      <div class="instagram-socialmedia">
+        <div class="instagram-img">
+          <img src="../assets/jpg/instagram-igt.jpg" id="instagram-img" />
+        </div>
+        <div class="instagram-label">
+          <div class="instagram-name">ifes.gottalent</div>
+          <div class="instagram-follow">
+            <a class="instagram-href" href="https://www.instagram.com/ifes.gottalent/" target="_blank">
+              <button class="instagram-button">
+                <div>Seguir</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section name="credits-section" id="credits-section" class="section">
+      <footer>
+        <p>footer (créditos)</p>
+      </footer>
+    </section>
+  </section>
+</body>
+<script src="../js/content-script.js"></script>
 </html>

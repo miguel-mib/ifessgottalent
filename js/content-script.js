@@ -4,6 +4,7 @@ const form_votacao = document.forms["form-votacao"];
 const navbars = document.querySelectorAll(".navigation-header a");
 const content = document.querySelector(".content");
 const botaoSeguir = document.querySelector("#seguir")
+const instagramButton = document.querySelector(".instagram-button div")
 let showSidebar = false;
 
 function toggleSidebar() {
@@ -101,12 +102,33 @@ vote_spans.forEach(function (item) {
       unslect.innerHTML = "SELECIONAR ";
     });
 
-    this.innerHTML = "SELECIONADO";
+    this.innerHTML = "SELECIONADO ✔";
   });
 });
 
-$(document).ready(function(){
-	$('#nav-icon').click(function(){
-		$(this).toggleClass('open');
-	});
-});
+instagramButton.addEventListener("click", function () {
+  this.textContent = "Seguindo ✔"
+})
+
+window.onscroll = function () {
+  const voteHeight     = document.querySelector("#vote-section").scrollHeight
+  const sponsorsHeight = document.querySelector("#sponsors-section").scrollHeight
+  const socialHeight   = document.querySelector("#socialmedia-section").scrollHeight
+  const creditsHeight  = document.querySelector("#credits-section").scrollHeight
+  const windowScroll   = [
+    document.body.scrollTop,
+    document.documentElement.scrollTop
+  ] 
+
+  windowScroll.forEach(function(window){
+    if (window < sponsorsHeight) {
+      console.log("vote")
+    } else if (window > sponsorsHeight && window < socialHeight) {
+      console.log("sponsors")
+    } else if (window > socialHeight && window < creditsHeight) {
+      console.log("social")
+    } else if (window > creditsHeight) {
+      console.log("credits")
+    }
+  })
+};

@@ -1,5 +1,5 @@
 let vouchers = ["1234", "4321", "ABCD", "DCBA"];
-let form = document.forms["voucher-form"];
+let form     = document.forms["voucher-form"];
 
 function clearError() {
   let error = document.querySelector(".error");
@@ -33,3 +33,4 @@ form.onsubmit = function (event) {
   }
   event.preventDefault();
 };
+
