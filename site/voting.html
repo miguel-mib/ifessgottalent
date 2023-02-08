@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet" />
-  <title>IGT Votação</title>
+  <title>IGT Patrocinadores</title>
 </head>
 <body>
   <header class="header" id="header">
@@ -51,8 +51,23 @@
       </ul>
     </div>
   </header>
-  <section tabindex="0" class="content" id="content">
-  </section>
+  <main tabindex="0" class="content" id="content">
+    <form class="voting-form" name="voting-form" id="voting-form">
+      <div class="voting-area">
+        <div class="participant-card">
+          <img src="../assets/participants/blank.png" alt="blank" />
+          <p id="name">participant name undefined</p>
+          <p id="category">participant category undefined</p>
+          <p id="talent-info">talent info undefined</p>
+          <label id="radio-label">
+            <input type="radio" name="vote-button" id="vote-button" value="0" />
+            <span>SELECIONAR</span>
+          </label>
+        </div>
+      </div>
+      <input type="submit" id="send-vote" value="ENVIAR VOTO" />
+    </form>
+  </main>
 </body>
 <script src="app.js"></script>
 </html>

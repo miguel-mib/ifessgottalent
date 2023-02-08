@@ -49,13 +49,20 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  transition: all 200ms linear;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-bg-color);
   color: var(--color-white);
+}
+
+main {
+  text-align: center;
+  transition: 1s;
+
+  padding-top: 3em;
+  height: 100vh;
 }
 
 /* HEADER */
@@ -124,7 +131,7 @@ body {
   text-align: center;
   
   padding: 8px;
-  width: 80px;
+  width: 125px;
   border-radius: 10px;
 
   background: var(--color-purple-shadow);
@@ -188,12 +195,12 @@ body {
 
   .navbar-items li span {
     text-align: center;
-    margin: 0 0 -10px 0;
+    margin: 0 10px 0;
   }
 
   .active {
     padding: 8px;
-    width: 100%;
+    width: 125px;
     border-radius: 10px;
   
     background: var(--color-purple-shadow);
@@ -205,26 +212,15 @@ body {
   }
 }
 
-#content {
-  text-align: center;
-  height: 100vh;
-  transition: 1s;
-}
 /* HOME */
 
 /* VOTAÇÃO DEFAULT */
 
-#voting-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.participants {
+.voting-area {
   display: flex;
 }
 
-.participant-box {
+.participant-card {
   text-align: center;
   justify-content: center;
   display: none;
@@ -242,16 +238,16 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .participant-box {
+  .participant-card {
     gap: 0px;
   }
 
-  .participants { 
+  .voting-area { 
     flex-direction: column;
   }
 }
 
-.participant-box img {
+.participant-card img {
   border-radius: 15px;
   margin-top: 30px;
   height: 240px;
@@ -259,7 +255,7 @@ body {
   box-sizing: border-box;
 }
 
-.participant-box #name {
+.participant-card #name {
   margin-top: 10px;
   display: block;
   color: #ffffff7e;
@@ -268,7 +264,7 @@ body {
   font-weight: bold;
 }
 
-.participant-box #category {
+.participant-card #category {
   margin-top: 2px;
   display: block;
   font-size: 15px;
@@ -276,7 +272,7 @@ body {
   font-weight: bold;
 }
 
-.participant-box #talent-info {
+.participant-card #talent-info {
   margin-top: 20px;
   display: block;
   font-size: 13px;
@@ -284,7 +280,7 @@ body {
   font-weight: bold;
 }
 
-.participant-box label {
+.participant-card label {
   display: flex;
 }
 

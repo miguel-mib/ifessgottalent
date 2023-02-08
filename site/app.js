@@ -40,12 +40,14 @@ content.addEventListener("focus", function () {
 
 // PAGINAS
 if (pageName === "home.html") {
-    const homeNav = document.querySelector("#home-nav")
-    homeNav.classList.add("active")
+    const navActive = document.querySelector("#home-nav")
+    navActive.classList.add("active")
     // HOME
     
 } else if (pageName.includes("voting")) {
-    
+    const navActive = document.querySelector("#voting-nav")
+    navActive.classList.add("active")
+
     // VOTAÇÃO DEFAULT
     function cloneParticipants() {
         const names = [
@@ -55,9 +57,9 @@ if (pageName === "home.html") {
         ];
         
         for (var i = 0; i < 3; i++) {
-            let original = document.querySelector(".participant-box");
+            let original = document.querySelector(".participant-card");
             let clone = original.cloneNode(true);
-            let destino = document.querySelector(".participants");
+            let destino = document.querySelector(".voting-area");
             
             clone.style.display = "inline-block";
             clone.querySelector("#vote-button").value = i;
@@ -65,8 +67,9 @@ if (pageName === "home.html") {
             destino.appendChild(clone);
         }
     }
+    cloneParticipants()
     
-    const form_votacao = document.forms["form-votacao"];
+    const form_votacao = document.forms["voting-form"];
     const vote_spans   = document.querySelectorAll("#radio-label span");
     
     form_votacao.addEventListener("submit", function (event) {
@@ -92,14 +95,21 @@ if (pageName === "home.html") {
     });
     
 } else if (pageName === "sponsors.html") {
+    const navActive = document.querySelector("#sponsors-nav")
+    navActive.classList.add("active")
     // PATROCINADORES
 } else if (pageName === "socialmedia.html") {
+    const navActive = document.querySelector("#socialmedia-nav")
+    navActive.classList.add("active")
     // REDES SOCIAIS
     const instagramButton = document.querySelector(".instagram-button div")
 
     instagramButton.addEventListener("click", function () {
         this.textContent = "Seguindo ✔"
     })
+} else if (pageName === "credits.html") {
+    const navActive = document.querySelector("#credits-nav")
+    navActive.classList.add("active")
 }
 
 
