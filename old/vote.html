@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="../styles/content-style.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet" />
@@ -12,7 +12,7 @@
 </head>
 <body id="body">
   <header class="header" id="header">
-    <button onclick="toggleSidebar()" class="btn-icon-header">
+    <button class="btn-icon-header">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
         viewBox="0 0 16 16">
         <path fill-rule="evenodd"
@@ -20,24 +20,37 @@
       </svg>
     </button>
     <div class="logo-header">
-      <img src="../assets/svg/logo.svg" alt="Logo IGT" id="logo" class="img-logo-header" />
+      <a href="#"><img src="../../assets/svg/logo.svg" alt="Logo IGT" id="logo" class="img-logo-header" /></a>
     </div>
-    <div class="navigation-header" id="navigation-header">
-      <button onclick="toggleSidebar()" class="btn-icon-header">
+    <div class="navbar" id="navbar">
+      <button class="btn-icon-header">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
           viewBox="0 0 16 16">
           <path
             d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
         </svg>
       </button>
-      <a href="#voting-section" onclick="closeSidebar()" class="active">Votação</a>
-      <a href="#sponsors-section" onclick="closeSidebar()">Patrocinadores</a>
-      <a href="#socialmedia-section" onclick="closeSidebar()">Redes Sociais</a>
-      <a href="#credits-section" onclick="closeSidebar()">Créditos</a>
+      <ul class="navbar-items">
+        <li id="home-item">
+          <a href="#" id="home-nav">Home</a>
+        </li>
+        <li id="voting-item">
+          <a href="#" id="voting-nav">Votação</a>
+        </li>
+        <li id="sponsors-item">
+          <a href="#" id="sponsors-nav">Patrocinadores</a>
+        </li>
+        <li id="socialmedia-item">
+          <a href="#" id="socialmedia-nav">Redes Sociais</a>
+        </li>
+        <li id="credits-item">
+          <a href="#" id="credits-nav">Créditos</a>
+        </li>
+      </ul>
     </div>
   </header>
   <section tabindex="0" class="content" id="content">
-    <section name="voting-section" id="vote-section" class="section">
+    <section name="voting-section" id="voting-section" class="section">
       <form class="form-votacao" name="form-votacao">
         <div class="participants">
           <div class="participant-box">
@@ -81,5 +94,5 @@
     </section>
   </section>
 </body>
-<script src="../js/content-script.js"></script>
+<script src="content-script.js"></script>
 </html>

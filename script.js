@@ -1,4 +1,4 @@
-let vouchers = ["1234", "4321", "ABCD", "DCBA"];
+let vouchers = ["1234", "4321", "ABCD", "DCBA", "1234ABCD"];
 let form     = document.forms["voucher-form"];
 
 function clearError() {
@@ -29,7 +29,7 @@ form.onsubmit = function (event) {
     showError("voucher-error", "Voucher inválido.");
     return false;
   } else {
-    window.location.href = "content/vote.html";
+    window.location.href = "site/home.html";
   }
   event.preventDefault();
 };
