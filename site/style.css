@@ -103,7 +103,7 @@ body {
 }
 
 .navbar-items li a,
-.navbar-items li p {
+.navbar-items li span {
   display: block;
   transition: 1s;
   margin: 8px;
@@ -176,7 +176,7 @@ body {
   }
 
   .navbar-items li a,
-  .navbar-items li p  {
+  .navbar-items li span  {
     display: block;
     transition: 1s;
     margin: 8px;
@@ -186,7 +186,7 @@ body {
     color: var(--color-purple);
   }
 
-  .navbar-items li p {
+  .navbar-items li span {
     text-align: center;
     margin: 0 0 -10px 0;
   }
