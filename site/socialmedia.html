@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet" />
   <title>IGT Redes Sociais</title>
 </head>
 <body>
@@ -43,7 +40,7 @@
           <a href="sponsors.html" id="sponsors-nav">Patrocinadores</a>
         </li>
         <li id="socialmedia-item">
-          <a href="socialmedia.html" id="socialmedia-nav">Redes Sociais</a>
+          <a href="socialmedia.html" id="socialmedia-nav" class="active">Redes Sociais</a>
         </li>
         <li id="credits-item">
           <a href="credits.html" id="credits-nav">Créditos</a>
@@ -52,7 +49,23 @@
     </div>
   </header>
   <main tabindex="0" class="content" id="content">
+    <div class="instagram-socialmedia">
+      <div class="instagram-img">
+        <img src="../assets/jpg/instagram-igt.jpg" id="instagram-img" />
+      </div>
+      <div class="instagram-label">
+        <div class="instagram-name">ifes.gottalent</div>
+        <div class="instagram-follow">
+          <a class="instagram-href" href="https://www.instagram.com/ifes.gottalent/" target="_blank">
+            <button class="instagram-button">
+              <div>Seguir</div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
-<script src="app.js"></script>
+<script src="js/main.js"></script>
+<script src="js/socialmedia.js"></script>
 </html>

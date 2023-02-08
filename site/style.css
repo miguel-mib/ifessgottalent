@@ -61,7 +61,7 @@ main {
   text-align: center;
   transition: 1s;
 
-  padding-top: 3em;
+  padding: 3em 0 3em 0;
   height: 100vh;
 }
 
@@ -218,6 +218,12 @@ main {
 
 .voting-area {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  margin: 0 10em 0 10em;
+  gap: 1em;
 }
 
 .participant-card {
@@ -228,7 +234,6 @@ main {
   margin: auto;
   height: auto;
   width: 300px;
-  gap: 35px;
   margin-bottom: 50px;
   border-radius: 15px;
   background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
@@ -244,6 +249,7 @@ main {
 
   .voting-area { 
     flex-direction: column;
+    margin: 0;
   }
 }
 
@@ -324,10 +330,10 @@ main {
   all: unset;
   margin-top: 10px;
   border: none;
-  height: 45px;
+  height: 60px;
   width: 270px;
   outline: none;
-  border-radius: 9px;
+  border-radius: 50px;
   display: inline-block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -338,7 +344,7 @@ main {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 
 #send-vote:hover {
