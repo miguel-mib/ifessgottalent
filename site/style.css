@@ -44,7 +44,6 @@
   }
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -72,14 +71,18 @@ main {
   flex-direction: row;
   align-items: center;
 
-  z-index: 3;
+  z-index: 10;
 }
 
 .header {
   justify-content: space-between;
-  height: 3.8em;
   padding: 5px 5%;
+  position: fixed;
+  top: 0;
 
+  height: 3.8em;
+  width: 100%;
+  
   background-color: var(--color-purple2);
   box-shadow: 0 8px 24px 0 var(--color-purple2);
 }
@@ -168,29 +171,13 @@ main {
   
   .navbar-items {
     flex-direction: column;
-    display: flex;
     margin: 10px 0 0 20px;
 
-    list-style: none;
     z-index: 4;
   }
 
   .navbar-items li {
     margin: 20px 0 0 0;
-
-    justify-content: center;
-    display: flex;
-  }
-
-  .navbar-items li a,
-  .navbar-items li span  {
-    display: block;
-    transition: 1s;
-    margin: 8px;
-  
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--color-purple);
   }
 
   .navbar-items li span {
@@ -198,14 +185,10 @@ main {
     margin: 0 10px 0;
   }
 
-  .active {
-    padding: 8px;
-    width: 125px;
-    border-radius: 10px;
-  
-    background: var(--color-purple-shadow);
+  .img-logo-header {
+    margin-right: 40px;
   }
-  
+
   .btn-icon-header {
     display: block;
     margin: 0 0 0 20px;
@@ -214,7 +197,113 @@ main {
 
 /* HOME */
 
+.home-bg-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+.home-bg-1 .bg-1-image {
+  position: relative;
+  
+  margin-top: -3em; 
+  background: url(../assets/jpg/igt-banner.jpg) no-repeat fixed center; 
+  background-size: cover;
+
+  width: 100%;
+  min-height: 650px;
+  opacity: .2;
+}
+
+.home-bg-1 .bg-1-h1 {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 40%;
+  
+  border-radius: 10px;
+  box-shadow: 0 0px 24px 0 rgba(18, 19, 36, 0.5);
+  background-color: rgba(18, 19, 36, 0.5);
+}
+
+.home-bg-1 .bg-1-h1 h1 {
+  padding: 40px;
+
+  color: rgba(255, 255, 255, .85);
+  font-size: 50px;
+  letter-spacing: 15px;
+}
+
+.prizes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 5em;
+}
+
+.prizes-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+
+  height: 400px;
+  width: 300px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
+}
+
+.prizes-item .prize-img img {
+  border-radius: 15px;
+  margin-top: 30px;
+  height: 240px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.prizes-item
+
+.teste2 {
+  height: 300px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .home-bg-1 .bg-1-image {
+    background-position-x: -600px;
+
+    min-height: 500px;
+    opacity: .2;
+  }
+  
+  .home-bg-1 .bg-1-h1 {
+    top: 35%;
+    width: 90%;
+  }
+  
+  .home-bg-1 .bg-1-h1 h1 {
+    padding: 20px;
+    font-size: 50px;
+    letter-spacing: 2px;
+  }
+}
+
 /* VOTAÇÃO DEFAULT */
+
+.voting-form h1 {
+  margin-bottom: 30px;
+  margin-top: -20px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
 
 .voting-area {
   display: flex;
@@ -228,9 +317,7 @@ main {
 
 .participant-card {
   text-align: center;
-  justify-content: center;
   display: none;
-  background-color: antiquewhite;
   margin: auto;
   height: auto;
   width: 300px;
@@ -355,7 +442,9 @@ main {
 /* REDES SOCIAIS */
 
 .instagram-socialmedia {
+  margin-top: 3.5em;
   display: flex;
+  justify-content: center;
 }
 
 .instagram-socialmedia .instagram-img img {
@@ -364,7 +453,6 @@ main {
   width: auto;
   border-radius: 50%;
   margin-right: 20px;
-  margin-left: -10px;;
 }
 
 .instagram-label {
@@ -392,6 +480,7 @@ main {
   border: none;
   box-shadow: 0px 8px 24px 0px var(--color-purple-shadow);
   color: #ffffffbb;
+  cursor: pointer;
 }
 
 /* PATROCINADORES */

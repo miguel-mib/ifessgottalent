@@ -1,15 +1,15 @@
 // VOTAÇÃO DEFAULT
 function cloneParticipants() {
     const names = [
-        "Miguel Migliorelli Bringhenti",
-        "Maysa Hellen Sacht Aragão",
-        "Miguel Força Mariani",
         "A",
         "B",
         "C",
         "D",
         "E",
-        "F"
+        "F",
+        "G",
+        "H",
+        "I"
     ];
     
     for (var i = 0; i < 9; i++) {
