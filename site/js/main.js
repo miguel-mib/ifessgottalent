@@ -9,11 +9,11 @@ function toggleSidebar() {
     
     if (showSidebar) {
         navbar.style.marginLeft = "-10vw";
-        navbar.style.animation = "showSidebar 0.5s";
+        navbar.style.animation = "showSidebar 0.3s ease-in-out";
         content.style.filter = "blur(2px)";
     } else {
         navbar.style.marginLeft = "-100vw";
-        navbar.style.animation = "hideSidebar 0.5s";
+        navbar.style.animation = "hideSidebar 0.3s ease-in-out";
         content.style.filter = "";
     }
 }
