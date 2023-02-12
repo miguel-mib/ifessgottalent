@@ -13,19 +13,33 @@
 /* DEFAULT */
 
 :root {
-  --color-white: #fff;
-  --color-white-hover: #ffffff7e;
-  --color-bg-color:#28243c;
-  --color-bg-color2:rgba(35, 33, 46, 0.5);
-  --color-dark1: #272727;
-  --color-dark2: #2d2d2d;
-  --color-dark3: #414141;
-  --color-dark4: #1c1c1c;
-  --color-dark5: #343434;
-  --color-purple: #be86ff71;
-  --color-purple2: #1f1a31;
-  --color-dark-purple: #151728;
-  --color-purple-shadow: #4a2872;
+  --color-white-1: #fff;
+  --color-white-2: #ffffff7e;
+  --color-white-3: #ffffffbb;
+  --color-white-4: #ffffffc9;
+
+  --color-steel-gray-1:#28243c;
+  --color-steel-gray-2:#23212e80;
+  --color-mine-shaft-1: #272727;
+  --color-mine-shaft-2: #2d2d2d;
+  --color-mine-shaft-3: #343434;
+  --color-cod-gray-1: #1c1c1c;
+  --color-tundora-1: #414141;
+
+  --color-milan-1: #fcffa6;
+
+  --color-persian-indigo: #39167Ab2;
+  --color-purple-heart-1: #7b3de081;
+  --color-purple-heart-2: #6f38d4;
+  --color-purple-heart-3: #7b3de0;
+  --color-medium-purple-1: #7949dd;
+  --color-heliotrope-1: #be86ff71;
+  --color-east-side-1: #a18fc7;
+  --color-mirage-1: #1f1a31;
+  --color-mirage-2: #151728;
+  --color-jacarta-1: #4a2872;
+
+  --color-linear-gradient-1: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
 }
 
 @keyframes gradient {
@@ -67,8 +81,8 @@
 body {
   font-family: 'Nunito', sans-serif;  
   font-weight: 600;
-  background-color: var(--color-bg-color);
-  color: var(--color-white);
+  background-color: var(--color-steel-gray-1);
+  color: var(--color-white-1);
 }
 
 main {
@@ -99,8 +113,8 @@ main {
   height: 3.8em;
   width: 100%;
   
-  background-color: var(--color-purple2);
-  box-shadow: 0 8px 24px 0 var(--color-purple2);
+  background-color: var(--color-mirage-1);
+  box-shadow: 0 8px 24px 0 var(--color-mirage-1);
 }
 
 .img-logo-header {
@@ -137,11 +151,11 @@ main {
 
   text-decoration: none;
   font-weight: bold;
-  color: var(--color-purple);
+  color: var(--color-heliotrope-1);
 }
 
 .navbar-items li a:hover {
-  color: var(--color-white-hover);
+  color: var(--color-white-2);
 }
 
 .active {
@@ -154,7 +168,7 @@ main {
   width: 125px;
   border-radius: 10px;
 
-  background: var(--color-purple-shadow);
+  background: var(--color-jacarta-1);
 }
 
 .btn-icon-header {
@@ -163,7 +177,7 @@ main {
   cursor: pointer;
 
   background: transparent;
-  color: var(--color-white-hover);
+  color: var(--color-white-2);
 }
 
 @media screen and (max-width: 768px) {
@@ -182,8 +196,8 @@ main {
     
     
     animation-duration: 1s;
-    background: var(--color-purple2);
-    box-shadow: 0 8px 24px 0 var(--color-purple2);
+    background: var(--color-mirage-1);
+    box-shadow: 0 8px 24px 0 var(--color-mirage-1);
   }  
   
   .navbar-items {
@@ -212,17 +226,18 @@ main {
   }
 }
 
-/* HOME */
+/* HOME - PRIZES*/
 
-.home-bg-1 {
+.home-header {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-   
+  /* justify-content: center; */
+  flex-direction: column;
+  box-shadow: 0px -100px 3000px var(--color-mirage-2);
 }
 
-.home-bg-1 .bg-1-image {
+.home-header .header-image {
   position: relative;
   
   margin-top: -3em; 
@@ -234,31 +249,62 @@ main {
   opacity: .2;
 }
 
-.home-bg-1 .bg-1-h1 {
+.home-header .header-title {
   position: absolute;
   text-align: center; 
-  width: 40%;
   
+  margin-top: 7em;
   border-radius: 10px;
 }
 
-.home-bg-1 .bg-1-h1 h1 {
-  /* padding: 20px; */
-  font-size: 100px;
+.home-header .header-title h1 {
+  font-size: 90px;
 }
 
-.home-bg-1 .bg-1-h1 h1:nth-child(1) {
-  color: #fcffa6;
+.home-header .header-title #header-title-1 {
+  color: var(--color-milan-1);
   font-weight: 900;
-  font-size: 110px;
+  font-size: 135px;
 }
 
-.home-bg-1 .bg-1-h1 h1:nth-child(2) {
-  color:#7949dd;
+.home-header .header-title #header-title-2 {
+  color: var(--color-medium-purple-1);
   letter-spacing: 0;
   font-weight: 500;
 
   margin-top: -60px;
+}
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.header-links a{
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+
+  color: var(--color-east-side-1);
+}
+
+.header-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10em;
+}
+
+.header-description span{
+  color: var(--color-medium-purple-1);
+}
+
+.header-description span span{
+  color: var(--color-milan-1);
 }
 
 .home-section-one {
@@ -271,9 +317,9 @@ main {
   margin-top: 2em;
 }
 
-.prizes-heading {
+.section-heading {
   margin-bottom: 1em;
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .prizes {
@@ -295,10 +341,10 @@ main {
   width: 300px;
   margin-bottom: 50px;
   border-radius: 15px;
-  background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
+  background: var(--color-linear-gradient-1);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
-  box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
+  box-shadow: 0px 8px 24px 0px var(--color-mirage-2);
 }
 
 .prizes-item .prize-img img {
@@ -310,35 +356,84 @@ main {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
-  .home-bg-1 .bg-1-image {
-    background-position-x: -600px;
+/* HOME - SOCIAL MEDIA */
+.home-section-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    min-height: 650px;
+  padding-bottom: 1em;
+}
+
+.instagram-socialmedia {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-socialmedia .instagram-img img {
+  box-shadow: 0px 8px 24px 0px var(--color-mirage-2);
+  height: 90px;
+  width: auto;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.instagram-label {
+  margin-top: 5px;
+}
+
+.instagram-name {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 350;
+  font-size: 23px;
+  margin-right: 100px;
+}
+
+.instagram-follow a{
+  text-decoration: none;
+}
+
+.instagram-follow a button{
+  margin-top: 20px;
+  border-radius: 7px;
+  width: 230px;
+  height: 35px;
+  display: block;
+  background-color: var(--color-purple-heart-3);
+  border: none;
+  box-shadow: 0px 8px 24px 0px var(--color-jacarta-1);
+  color: var(--color-white-3);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .home-header .header-image {
+    background-position-x: -600px;
+    background-position-y: 0px;
+
+    min-height: 80vh;
     opacity: .2;
   }
   
-  .home-bg-1 .bg-1-h1 {
-    width: 90%;
-  }
-  
-  .home-bg-1 .bg-1-h1 h1 {
+  .home-header .header-title h1 {
     padding: 20px;
-    font-size: 60px;
+    font-size: 50px;
   }
   
-  .home-bg-1 .bg-1-h1 h1:nth-child(1) {
-    color: #fcffa6;
-    font-size: 90px;
+  .home-header .header-title #header-title-1 {
+    color: var(--color-milan-1);
+    font-size: 80px;
   }
   
-  .home-bg-1 .bg-1-h1 h1:nth-child(2) {
-    color:#7949dd;
+  .home-header .header-title #header-title-2 {
+    color: var(--color-medium-purple-1);
     letter-spacing: 0;
   
     margin-top: -70px;
   }
-  
+
   .prizes-heading {
     margin-bottom: 1em;
     font-size: 20px;
@@ -377,21 +472,11 @@ main {
   width: 300px;
   margin-bottom: 50px;
   border-radius: 15px;
-  background: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
+  background: var(--color-linear-gradient-1);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
-  box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
-}
-
-@media screen and (max-width: 768px) {
-  .participant-card {
-    gap: 0px;
-  }
-
-  .voting-area { 
-    flex-direction: column;
-    margin: 0;
-  }
+  box-shadow: 0px 8px 24px 0px var(--color-mirage-2);
+  color: var(--color-white-3);
 }
 
 .participant-card img {
@@ -405,7 +490,6 @@ main {
 .participant-card #name {
   margin-top: 10px;
   display: block;
-  color: #ffffff7e;
   font-size: 17px;
   text-transform: uppercase;
   font-weight: bold;
@@ -415,7 +499,6 @@ main {
   margin-top: 2px;
   display: block;
   font-size: 15px;
-  color: #ffffff7e;
   font-weight: bold;
 }
 
@@ -423,7 +506,6 @@ main {
   margin-top: 20px;
   display: block;
   font-size: 13px;
-  color: #ffffff7e;
   font-weight: bold;
 }
 
@@ -446,10 +528,10 @@ main {
   border-radius: 9px;
   display: inline-flex;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #7b3de081;
+  background-color: var(--color-purple-heart-1);
   font-size: 20px;
-  box-shadow: 1px 1px 10px var(--color-purple-shadow);
-  color: #ffffff7e;
+  box-shadow: 1px 1px 10px var(--color-jacarta-1);
+  color: var(--color-white-2);
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -463,8 +545,8 @@ main {
 }
 
 #radio-label input:checked + span {
-  color: #ffffffc9;
-  background-color: #39167ab2;  
+  color: var(--color-white-4);
+  background-color: var(--color-persian-indigo);  
 }
 
 #send-vote {
@@ -478,10 +560,10 @@ main {
   display: inline-block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #7b3de0;
+  background-color: var(--color-purple-heart-3);
   font-size: 20px;
-  box-shadow: 0px 8px 24px 0px var(--color-purple-shadow);
-  color: #ffffff7e;
+  box-shadow: 0px 8px 24px 0px var(--color-jacarta-1);
+  color: var(--color-white-3);
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -489,52 +571,19 @@ main {
 }
 
 #send-vote:hover {
-  background-color: #6f38d4;
-  color: white;
+  background-color: var(--color-purple-heart-2);
+  color: var(--color-white-1);
 }
 
-/* REDES SOCIAIS */
+@media screen and (max-width: 768px) {
+  .participant-card {
+    gap: 0px;
+  }
 
-.instagram-socialmedia {
-  margin-top: 3.5em;
-  display: flex;
-  justify-content: center;
-}
-
-.instagram-socialmedia .instagram-img img {
-  box-shadow: 0px 8px 24px 0px var(--color-dark-purple);
-  height: 90px;
-  width: auto;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.instagram-label {
-  margin-top: 5px;
-}
-
-.instagram-name {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 350;
-  font-size: 23px;
-  margin-right: 100px;
-}
-
-.instagram-href {
-  text-decoration: none;
-}
-
-.instagram-button {
-  margin-top: 20px;
-  border-radius: 7px;
-  width: 230px;
-  height: 35px;
-  display: block;
-  background-color: #7b3de0;
-  border: none;
-  box-shadow: 0px 8px 24px 0px var(--color-purple-shadow);
-  color: #ffffffbb;
-  cursor: pointer;
+  .voting-area { 
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 /* PATROCINADORES */
