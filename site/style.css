@@ -86,10 +86,9 @@ body {
 }
 
 @media screen and (max-width: 362px) {
-  body {
+  .home-body {
     width: fit-content;
   }
-  
 }
 
 main {
@@ -157,6 +156,7 @@ main {
   margin: 8px;
 
   text-decoration: none;
+  text-align: center;
   font-weight: bold;
   color: var(--color-heliotrope-1);
 }
@@ -216,6 +216,12 @@ main {
 
   .navbar-items li {
     margin: 20px 0 0 0;
+  }
+
+  .active {
+    padding: 8px;
+    width: 30vw;
+    border-radius: 10px;
   }
 
   .navbar-items li span {
