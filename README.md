@@ -22,6 +22,8 @@ IFES's Got Talent (IGT) é um projeto promovido pela sala M08 do curso Técnico 
 O site visa auxiliar nos votos do show.
 
 - Este repositório contém apenas o front-end do site.
+- A senha (voucher) para testar é "1234ABCD".
+- Teste o site online [aqui](https://miguel-mib.github.io/ifesgottalent/).
 
 ---
 
