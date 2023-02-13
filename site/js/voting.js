@@ -46,6 +46,6 @@ vote_spans.forEach(function (item) {
             unslect.innerHTML = "SELECIONAR ";
         });
         
-        this.innerHTML = "SELECIONADO ✔";
+        this.innerHTML = "<span class=\"material-symbols-outlined\">check_circle</span>SELECIONADO";
     });
 });

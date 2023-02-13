@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>IGT Patrocinadores</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
+  <title>IGT Votação</title>
 </head>
-<body>
+<body class="voting-body">
+  <div tabindex="0" class="header-blur-bg"></div>
   <header class="header" id="header">
     <button class="btn-icon-header">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -59,7 +61,7 @@
           <p id="talent-info">talent info undefined</p>
           <label id="radio-label">
             <input type="radio" class="vote-button" name="vote-button" id="vote-button" value="0" />
-            <span>SELECIONAR</span>
+            <span class="radio-label-select-button">SELECIONAR</span>
           </label>
         </div>
       </div>
