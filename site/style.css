@@ -1,6 +1,6 @@
 /* IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@500;600;900&display=swap');
-@import url(../assets/jpg/igt-banner.jpg);
+@import url(../assets/jpg/igt-banner2.png);
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -85,6 +85,13 @@ body {
   color: var(--color-white-1);
 }
 
+@media screen and (max-width: 362px) {
+  body {
+    width: fit-content;
+  }
+  
+}
+
 main {
   text-align: center;
   transition: 1s;
@@ -128,7 +135,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 120px;
 
   list-style: none;
   overflow: hidden;
@@ -229,7 +236,6 @@ main {
 /* HOME - PRIZES SECTION*/
 
 .home-header {
-  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -239,21 +245,26 @@ main {
 }
 
 .home-header .header-image {
-  position: relative;
-  
-  margin-bottom: -3em; 
-  background: url(../assets/jpg/igt-banner.jpg) no-repeat fixed center; 
+  background: url(../assets/jpg/igt-banner2.png) no-repeat fixed center; 
   background-size: cover;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   width: 100%;
   min-height: 650px;
-  opacity: .2;
 }
 
 .home-header .header-title {
-  position: absolute;
   text-align: center; 
-  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  top: 0%;
+
   margin-top: 7em;
   border-radius: 10px;
 }
@@ -279,15 +290,20 @@ main {
 .header-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1em;
 }
 
 .header-links a{
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
 
-  color: var(--color-east-side-1);
+  color: var(--color-white-1);
+
+  text-shadow: 0px 8px 24px 0px black ;
+  padding: 3px 10px 3px 10px;
+  /* background-color: #8251bb85; */
 }
 
 .header-description {
@@ -296,8 +312,8 @@ main {
   align-items: center;
   
   text-align: center;
-  font-size: 20px;
-  margin-top: 10em;
+  font-size: 25px;
+  margin-top: 5em;
 }
 
 .header-description span{
@@ -314,7 +330,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-bottom: -2em;
+  margin-bottom: 2em;
   gap: 1em;
 }
 
@@ -368,10 +384,10 @@ main {
 
 .home-section-two .schedules {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 4em;
 }
 
 /* HOME - SOCIAL MEDIA SECTION */
@@ -429,11 +445,10 @@ main {
 
 @media screen and (max-width: 768px) {
   .home-header .header-image {
-    background-position-x: -600px;
     background-position-y: 0px;
 
+    margin-bottom: -3em; 
     min-height: 80vh;
-    opacity: .2;
   }
   
   .home-header .header-title h1 {
@@ -453,9 +468,21 @@ main {
     margin-top: -70px;
   }
 
+  .header-links a{
+    font-size: 16px;
+  }
+
+  .header-description {
+    font-size: 20px;
+  }
+
   .prizes {
     flex-direction: column;
     gap: 3em;
+  }
+
+  .home-section-one {
+    margin-bottom: -2em;
   }
 
   .prizes-heading {
@@ -473,6 +500,17 @@ main {
     margin-top: 5em;
     margin-bottom: 1em;
     font-size: 16px;
+  }
+
+  .home-section-two .schedules {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+@media  screen and (max-height: 700px) {
+  .header-description {
+    margin-bottom: 40px;
   }
 }
 
