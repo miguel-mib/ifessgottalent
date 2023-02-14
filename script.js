@@ -1,4 +1,4 @@
-let vouchers = ["1234", "4321", "ABCD", "DCBA", "1234ABCD"];
+let vouchers = ["1234ABCD"];
 let form     = document.forms["voucher-form"];
 
 function clearError() {
