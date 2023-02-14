@@ -23,7 +23,7 @@ O site visa auxiliar nos votos do show.
 
 - Este repositório contém apenas o front-end do site.
 - A senha (voucher) para testar é "1234ABCD".
-- Teste o site online [aqui](https://miguel-mib.github.io/ifesgottalent/).
+- Teste o site online [aqui](https://miguel-mib.github.io/ifessgottalent/).
 
 ---
 
