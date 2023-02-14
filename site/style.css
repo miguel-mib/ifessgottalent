@@ -1,13 +1,9 @@
 /* IMPORT */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@500;600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@500;600;900&display=swap");
 @import url(../assets/jpg/igt-banner2.png);
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 700,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
 }
 
 /* DEFAULT */
@@ -18,8 +14,8 @@
   --color-white-3: #ffffffbb;
   --color-white-4: #ffffffc9;
 
-  --color-steel-gray-1:#28243c;
-  --color-steel-gray-2:#23212e80;
+  --color-steel-gray-1: #28243c;
+  --color-steel-gray-2: #23212e80;
   --color-mine-shaft-1: #272727;
   --color-mine-shaft-2: #2d2d2d;
   --color-mine-shaft-3: #343434;
@@ -28,7 +24,7 @@
 
   --color-milan-1: #fcffa6;
 
-  --color-persian-indigo: #39167Ab2;
+  --color-persian-indigo: #39167ab2;
   --color-purple-heart-1: #7b3de081;
   --color-purple-heart-2: #6f38d4;
   --color-purple-heart-3: #7b3de0;
@@ -39,7 +35,13 @@
   --color-mirage-2: #151728;
   --color-jacarta-1: #4a2872;
 
-  --color-linear-gradient-1: linear-gradient(-45deg, #6c3ea5, #7e63e1, #6e19d6, #a861ff);
+  --color-linear-gradient-1: linear-gradient(
+    -45deg,
+    #6c3ea5,
+    #7e63e1,
+    #6e19d6,
+    #a861ff
+  );
 }
 
 @keyframes gradient {
@@ -79,7 +81,7 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;  
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   background-color: var(--color-steel-gray-1);
   color: var(--color-white-1);
@@ -117,13 +119,13 @@ main {
 .header {
   justify-content: space-between;
   padding: 5px 5%;
-  margin-top: -.1em;
+  margin-top: -0.1em;
   position: fixed;
   top: 0;
 
   height: 3.8em;
   width: 100%;
-  
+
   background-color: var(--color-mirage-1);
   box-shadow: 0 8px 24px 0 var(--color-mirage-1);
 }
@@ -160,7 +162,7 @@ main {
 .navbar-items li {
   margin-bottom: 1rem;
   margin: auto 10px;
-  
+
   justify-content: center;
   display: flex;
   float: left;
@@ -187,7 +189,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
+
   padding: 8px;
   width: 125px;
   border-radius: 10px;
@@ -217,13 +219,12 @@ main {
 
     overflow: hidden;
     position: fixed;
-    
-    
+
     animation-duration: 1s;
     background: var(--color-mirage-1);
     box-shadow: 0 8px 24px 0 var(--color-mirage-1);
-  }  
-  
+  }
+
   .navbar-items {
     flex-direction: column;
     margin: 10px 0 0 20px;
@@ -268,7 +269,7 @@ main {
 }
 
 .home-header .header-image {
-  background: url(../assets/jpg/igt-banner2.png) no-repeat fixed center; 
+  background: url(../assets/jpg/igt-banner2.png) no-repeat fixed center;
   background-size: cover;
 
   display: flex;
@@ -280,7 +281,7 @@ main {
 }
 
 .home-header .header-title {
-  text-align: center; 
+  text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -317,14 +318,14 @@ main {
   gap: 1em;
 }
 
-.header-links a{
+.header-links a {
   text-decoration: underline;
   font-weight: 600;
   font-size: 24px;
 
   color: var(--color-white-1);
 
-  text-shadow: 0px 8px 24px 0px black ;
+  text-shadow: 0px 8px 24px 0px black;
   padding: 3px 10px 3px 10px;
   /* background-color: #8251bb85; */
 }
@@ -333,17 +334,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   text-align: center;
   font-size: 25px;
   margin-top: 5em;
 }
 
-.header-description span{
+.header-description span {
   color: var(--color-medium-purple-1);
 }
 
-.header-description span span{
+.header-description span span {
   color: var(--color-milan-1);
 }
 
@@ -402,7 +403,6 @@ main {
   align-items: center;
   justify-content: center;
   padding-bottom: 2em;
-
 }
 
 .home-section-two .schedules {
@@ -443,17 +443,18 @@ main {
 }
 
 .instagram-name {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 350;
   font-size: 23px;
   margin-right: 100px;
 }
 
-.instagram-follow a{
+.instagram-follow a {
   text-decoration: none;
 }
 
-.instagram-follow a button{
+.instagram-follow a button {
   margin-top: 20px;
   border-radius: 7px;
   width: 230px;
@@ -470,10 +471,10 @@ main {
   .home-header .header-image {
     background-position-y: 0px;
 
-    margin-bottom: -3em; 
+    margin-bottom: -3em;
     min-height: 80vh;
   }
-  
+
   .home-header .header-title h1 {
     padding: 20px;
     font-size: 50px;
@@ -483,15 +484,15 @@ main {
     color: var(--color-milan-1);
     font-size: 80px;
   }
-  
+
   .home-header .header-title #header-title-2 {
     color: var(--color-medium-purple-1);
     letter-spacing: 0;
-  
+
     margin-top: -70px;
   }
 
-  .header-links a{
+  .header-links a {
     font-size: 16px;
   }
 
@@ -530,12 +531,12 @@ main {
     gap: 1em;
   }
 
-  .schedules-item span{
+  .schedules-item span {
     font-size: 16px;
   }
 }
 
-@media  screen and (max-height: 700px) {
+@media screen and (max-height: 700px) {
   .header-description {
     margin-bottom: 40px;
   }
@@ -548,7 +549,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-} 
+}
 
 .voting-form h1 {
   margin-bottom: 30px;
@@ -561,7 +562,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
+
   margin: 0 10em 0 10em;
   gap: 1em;
 }
@@ -635,7 +636,8 @@ main {
   outline: none;
   border-radius: 9px;
   display: inline-flex;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: var(--color-purple-heart-1);
   font-size: 20px;
   box-shadow: 1px 1px 10px var(--color-jacarta-1);
@@ -654,7 +656,7 @@ main {
 
 #radio-label input:checked + span.radio-label-select-button {
   color: var(--color-white-4);
-  background-color: var(--color-persian-indigo);  
+  background-color: var(--color-persian-indigo);
 }
 
 #send-vote {
@@ -666,7 +668,8 @@ main {
   outline: none;
   border-radius: 50px;
   display: inline-block;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: var(--color-purple-heart-3);
   font-size: 20px;
   box-shadow: 0px 8px 24px 0px var(--color-jacarta-1);
@@ -687,7 +690,7 @@ main {
     gap: 0px;
   }
 
-  .voting-area { 
+  .voting-area {
     flex-direction: column;
     margin: 0;
   }
@@ -707,7 +710,7 @@ main {
 }
 
 .mediastock-header a {
-  text-decoration:underline var(--color-medium-purple-1);
+  text-decoration: underline var(--color-medium-purple-1);
   color: var(--color-white-1);
   font-size: 36px;
   font-weight: 900;
@@ -718,8 +721,7 @@ main {
 }
 
 .mediastock-header span span:nth-child(2) {
-  color: var(--color-medium-purple-1);  
-
+  color: var(--color-medium-purple-1);
 }
 
 .mediastock-videos,
@@ -743,8 +745,8 @@ main {
 .mediastock-images-grid {
   height: 270px;
   width: 360px;
-  gap: .5em;
-} 
+  gap: 0.5em;
+}
 
 .mediastock-grid-img {
   height: 133px;
@@ -770,7 +772,6 @@ main {
 .media-bg-opened {
   display: block;
 }
-
 
 .opened-img {
   box-shadow: none;
@@ -803,7 +804,7 @@ main {
 }
 
 .cursor-pointer-svg {
-  transform: translate(6.25em,-1.1875em) rotate(-15deg);
+  transform: translate(6.25em, -1.1875em) rotate(-15deg);
   margin-bottom: -1.5625em;
 }
 
@@ -811,10 +812,10 @@ main {
   .mediastock-header a {
     font-size: 28px;
   }
-  
+
   .mediastock-videos,
   .mediastock-images {
-  flex-direction: column;
+    flex-direction: column;
   }
 
   .opened-img {
@@ -825,10 +826,10 @@ main {
   .mediastock-images-grid .opened-img {
     height: 17em;
     top: 30%;
-    }
+  }
 
   .cursor-pointer-svg {
-    transform: translate(6.25em,-1.1875em) rotate(-15deg);
+    transform: translate(6.25em, -1.1875em) rotate(-15deg);
     margin-bottom: -2.1875em;
   }
 }
